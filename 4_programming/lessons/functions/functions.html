@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Functions Practice</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </head>
 
-    <body>
-        <!-- No HTML necessary! The page will simply be blank. -->
+<head>
+    <title>Functions Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-        <script>
-            /* Your JS goes here */
-        </script>
-    </body>
+<body>
+    <!-- No HTML necessary! The page will simply be blank. -->
+
+    <script>
+        //Displays "Hooray!" in an alert box.
+        function hooray() {
+            alert("Hooray!");
+        }
+
+        //Takes two numbers as input, and returns their difference.
+        function subtract(x, y) {
+            if (x - y < 0) {
+                subtract = (x - y) * (-1);
+                return subtract;
+            }
+            if (x - y >= 0) {
+                return subtract;
+            }
+        }
+
+        //Takes one number as input, and returns the number times two.
+        function double(x) {
+            double = x * 2;
+            return double;
+        }
+
+        //Takes one string as input, and returns the string with an exclamation mark added to the end.
+        function excited(word) {
+            word = word + !;
+            return excited;
+        }
+
+        //Takes two strings as input, and returns the two strings joined with a space between them.
+        function stringJoin(str1, str2) {
+            stringJoin = str1 + ' ' + str2;
+            return stringJoin;
+        }
+
+        //Displays "Happy birthday, [name]!" in an alert box (using the provided name). No return value.
+        function birthday(name) {
+            birthday = "Happy birthday [name]!"
+            alert(birthday);
+        }
+
+    </script>
+</body>
+
 </html>
