@@ -45,13 +45,13 @@ z = add(3,4);   // z will get the value 7.
 
 ### Codecademy
 
-For further learning, complete the Codecademy lessons on functions: [Codecademy JavaScript: Functions](https://www.codecademy.com/courses/learn-javascript-functions/lessons/functions/exercises/intro-to-functions).
+For further learning, complete the Codecademy lessons on functions: [Codecademy JavaScript: Functions](https://www.codecademy.com/courses/learn-javascript-functions/lessons/functions/exercises/intro-to-functions) (only do Steps 1-7, stop at "Function Expressions").
 
 Good luck and have fun!
 
 ## Exercises
 
-In your GH folder, **pull** from upstream to get the latest changes. Then find *this folder* (`GH/4_programming/lessons/functions/`), open `functions.html`, and create the following functions in the `<script>` block:
+In your GH folder, **pull from upstream** to get the latest changes. Then find *this folder* (`GH/4_programming/lessons/functions/`), open `functions.html`, and create the following functions in the `<script>` block:
 
 1. `hooray()`: Displays "Hooray!" in an alert box.
 2. `subtract(x,y)`: Takes two numbers as input, and returns their difference.
