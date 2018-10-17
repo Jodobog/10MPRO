@@ -14,13 +14,20 @@ Desc: Translates into Pig Latin
 
     <body>
         <!-- Creates user input -->
-        <input type="text" name="word" ><br>
+        <input type="text" id="wordinput"><br>
         <!-- Creates translate button -->
-        <button onclick="Translation">Translate</button>
+        <button onclick="Translation()">Translate</button>
 
         <script>
-            function Translation(word) {
-
+            function Translation() {
+                var word = document.getElementById(wordinput).value;
+                var firstletter = .charAt(0);
+                if(["", " ", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].indexOf(firstletter) > -1) {
+                   Translation = "Not a valid word";
+                   }
+                if(["a", "e", "i", "o", "u", "y"].indexOf(firstletter) > -1) {
+                   Translation = word + "ay";
+                   }
                 alert(Translation);
             }
         </script>
