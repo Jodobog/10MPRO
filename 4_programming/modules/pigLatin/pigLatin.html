@@ -21,13 +21,16 @@ Desc: Translates into Pig Latin
         <script>
             function Translation() {
                 var word = document.getElementById(wordinput).value;
-                var firstletter = .charAt(0);
-                if(["", " ", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].indexOf(firstletter) > -1) {
-                   Translation = "Not a valid word";
+                var firstletter = word.charAt(0);
+                if(["a", "e", "i", "o", "u", "y"].indexOf(firstletter) <= -1) {
+                   Translation = word.slice(1,100000) + firstletter + "ay";
                    }
-                if(["a", "e", "i", "o", "u", "y"].indexOf(firstletter) > -1) {
+                else if(["a", "e", "i", "o", "u", "y"].indexOf(firstletter) > -1) {
                    Translation = word + "ay";
                    }
+                else {
+                     Translation = "Not a valid word";
+                }
                 alert(Translation);
             }
         </script>
