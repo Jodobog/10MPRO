@@ -20,18 +20,34 @@ Desc: Translates into Pig Latin
 
         <script>
             function Translation() {
-                var word = document.getElementById(wordinput).value;
+                //Defines a list of variables
+                var vowels = ["a", "e", "i", "o", "u", "y"];
+                var consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"];
+                var word = document.getElementById("wordinput").value;
+                var wordlength = word.length;
                 var firstletter = word.charAt(0);
-                if(["a", "e", "i", "o", "u", "y"].indexOf(firstletter) <= -1) {
-                   Translation = word.slice(1,100000) + firstletter + "ay";
-                   }
-                else if(["a", "e", "i", "o", "u", "y"].indexOf(firstletter) > -1) {
-                   Translation = word + "ay";
-                   }
-                else {
-                     Translation = "Not a valid word";
+                var result;
+                var test;
+                var temp = 1000000;
+
+                for(scan = 0; scan >= 0 && scan < vowels.length; scan++) {
+                    var test = word.indexOf(vowels[scan]);
+                    if(test > -1) {
+                        temp = min(temp, test);
+                    }
                 }
-                alert(Translation);
+
+                if(consonants.indexOf(firstletter) > -1) {
+                   result = word.slice(1,wordlength) + firstletter + "ay";
+                   }
+                else if(vowels.indexOf(firstletter) > -1) {
+                    Translation = word + "ay";
+                }
+                else {
+                     result = "Not a valid word";
+                }
+                    //alert(result);
+                    alert(temp);
             }
         </script>
     </body>
