@@ -33,7 +33,7 @@ Desc: Translates into Pig Latin
                 for(scan = 0; scan >= 0 && scan < vowels.length; scan++) {
                     var test = word.indexOf(vowels[scan]);
                     if(test > -1) {
-                        temp = min(temp, test);
+                        temp = Math.min(temp, test);
                     }
                 }
 
