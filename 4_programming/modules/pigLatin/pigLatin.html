@@ -49,8 +49,8 @@ Desc: Translates into Pig Latin
                    result = word.slice(firstvowel,wordlength) + firstconsonants + "ay";
                    }
                 //Translates if the first letter(s) is/are vowels
-                else if(vowels.indexOf(firstletter) > -1) {
-                    Translation = word + "ay";
+                if(vowels.indexOf(firstletter) > -1) {
+                    result = word + "ay";
                 }
                 //Translates if the first letter(s) is/are not letters
                 else {
