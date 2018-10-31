@@ -16,7 +16,7 @@ Desc: Translates into Pig Latin
         <!-- Creates header -->
         <h1>Pig Latin Translator</h1>
         <!-- Creates description in paragraphs-->
-        <p>Enter a single word to have it translated into pig latin.</p>
+        <p>Enter a single lowercase word to have it translated into pig latin.</p>
         <!-- Creates user input -->
         <input type="text" id="wordinput"><br>
         <!-- Creates translate button -->
@@ -56,6 +56,7 @@ Desc: Translates into Pig Latin
                 else {
                      result = "Not a valid word";
                 }
+                //Sends translation as an alert
                     alert(result);
             }
         </script>
