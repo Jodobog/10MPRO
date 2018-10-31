@@ -31,6 +31,7 @@ Desc: Translates into Pig Latin
                 var firstvowel = 1000000;
                 var firstconsonants;
 
+                //Finds the location of the first vowel
                 for(scan = 0; scan >= 0 && scan < vowels.length; scan++) {
                     findvowel = word.indexOf(vowels[scan]);
                     if(findvowel > -1) {
@@ -38,13 +39,16 @@ Desc: Translates into Pig Latin
                     }
                 }
 
+                //Translates if the first letter(s) is/are consonants
                 firstconsonants = word.slice(0,firstvowel);
                 if(consonants.indexOf(firstletter) > -1) {
                    result = word.slice(firstvowel,wordlength) + firstconsonants + "ay";
                    }
+                //Translates if the first letter(s) is/are vowels
                 else if(vowels.indexOf(firstletter) > -1) {
                     Translation = word + "ay";
                 }
+                //Translates if the first letter(s) is/are not letters
                 else {
                      result = "Not a valid word";
                 }
