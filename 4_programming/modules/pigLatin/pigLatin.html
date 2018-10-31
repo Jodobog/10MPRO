@@ -27,18 +27,20 @@ Desc: Translates into Pig Latin
                 var wordlength = word.length;
                 var firstletter = word.charAt(0);
                 var result;
-                var test;
-                var temp = 1000000;
+                var findvowel;
+                var firstvowel = 1000000;
+                var firstconsonants;
 
                 for(scan = 0; scan >= 0 && scan < vowels.length; scan++) {
-                    var test = word.indexOf(vowels[scan]);
-                    if(test > -1) {
-                        temp = Math.min(temp, test);
+                    findvowel = word.indexOf(vowels[scan]);
+                    if(findvowel > -1) {
+                        firstvowel = Math.min(firstvowel, findvowel);
                     }
                 }
 
+                firstconsonants = word.slice(0,firstvowel);
                 if(consonants.indexOf(firstletter) > -1) {
-                   result = word.slice(1,wordlength) + firstletter + "ay";
+                   result = word.slice(firstvowel,wordlength) + firstconsonants + "ay";
                    }
                 else if(vowels.indexOf(firstletter) > -1) {
                     Translation = word + "ay";
@@ -46,8 +48,7 @@ Desc: Translates into Pig Latin
                 else {
                      result = "Not a valid word";
                 }
-                    //alert(result);
-                    alert(temp);
+                    alert(result);
             }
         </script>
     </body>
