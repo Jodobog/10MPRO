@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+File: madLibs.html
+Name: Dominic Harvey
+Date: 2018-10-31
+Desc: Mad Libs word game
+-->
+<html>
+    <head>
+        <!-- Creates title -->
+        <title>Mab Libs</title>
+    </head>
+
+    <body>
+        <!-- Creates header -->
+        <h1>Online Mad Libs game</h1>
+        <!-- Creates description in paragraphs-->
+        <p>Enter the following words to create a story.</p>
+        <!-- Creates user inputs with labels -->
+        <p>Name: <input type="text" id="name"></p>
+        <p>School subject: <input type="text" id="subject"></p>
+        <p>Profession: <input type="text" id="profession"></p>
+        <p>Adjective: <input type="text" id="adjective"></p>
+        <p>Place: <input type="text" id="place"></p>
+        <p>Length of time: <input type="text" id="time"></p>
+        <p>Object: <input type="text" id="object"></p>
+        <p>Celebrity: <input type="text" id="celebrity"></p>
+        <p>Acquaintance: <input type="text" id="acquaintance"></p>
+        <p>Relative: <input type="text" id="relative"></p>
+        <!-- Creates generate story button -->
+        <button onclick="Generate()">Generate Story</button>
+
+        <script>
+            function Generate() {
+                //Defines a list of variables from inputs
+                var name = document.getElementById("name").value;
+                var subject = document.getElementById("subject").value;
+                var profession = document.getElementById("profession").value;
+                var adjective = document.getElementById("adjective").value;
+                var place = document.getElementById("place").value;
+                var time = document.getElementById("time").value;
+                var object = document.getElementById("object").value;
+                var celebrity = document.getElementById("celebrity").value;
+                var relative = document.getElementById("relative").value;
+                var acquaintance = document.getElementById("acquaintance").value;
+
+                //Sends story as an alert
+                alert("Please excuse " + name + " from " + subject + " today. Their " + profession + " says they are too " + adjective + " to attend " + place + ". They will return to school in " + time + ". Please send their " + object + " home with " + celebrity + ", their " + acquaintance + ". Signed, " + name + "'s " + relative + ".")
+            }
+        </script>
+    </body>
